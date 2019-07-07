@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Basic inbosdk usage",
+    "short_name": "basic_sdk_inbox",
+    "version": "1.0",
+    "author": "Foo bar <foo@bar.com>",
+    "description": "Using inboxsdk",
+    "content_scripts": [
+        {
+            "matches": [ "*://mail.google.com/*" ],
+            "js": [
+               "inboxsdk.js", "content.js"
+            ]
+        }
+    ],
+     "permissions": [
+      "tabs",
+        "*://*.google.com/",
+        "*://*/*",
+        "https://*/*"
+    ]
+}
